@@ -1,0 +1,12 @@
+---
+name : Create EC2 Instance with Route 53 Record
+host: local
+connection: local
+vars:
+  ami_id: "ami-09c813fb71547fc4f"
+  sg_id: "sg-04942374fe172ba17"
+  Zone_ID: "Z0948150OFPSYTNVYZOY"
+  domain_name: "saikdevops.fun"
+  instances:
+    - mongodb
+    - redis
