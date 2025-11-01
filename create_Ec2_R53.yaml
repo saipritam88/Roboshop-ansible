@@ -31,7 +31,7 @@
      amazon.aws.route53_record:
        zone_id: "{{ domain_name }}"
        state: present
-       record: "{{ item.item }}.{{ domain_name }}"
+       record: "{{ item.item }}.{{ domain_name }}" # e.g., mongodb.saikdevops.fun
        type: A
        ttl: 1
        value: "{{ item.instances[0].private_ip_address }}"
