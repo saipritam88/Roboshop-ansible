@@ -1,5 +1,5 @@
 ---
-- name : Create EC2 Instance with Route 53 Record
+- name : Create EC2 Instance and Route 53 Record
   hosts: local
   connection: local
   vars:
