@@ -3,7 +3,7 @@
   hosts: local
   connection: local
   vars:
-    image_id: "ami-09c813fb71547fc4f"
+    ami: "ami-09c813fb71547fc4f"
     sg_id: "sg-04942374fe172ba17"
     zone_id: "Z0948150OFPSYTNVYZOY"
     domain_name: "saikdevops.fun"
@@ -16,7 +16,7 @@
        name: "{{ item }}"
        instance_type: "t2.micro"
        image_id: "{{ image_id }}"
-       security_group_ids: "{{ sg_id }}"
+       security_group: "{{ sg_id }}"
        count: 1
        tags:
          Name: "{{ item }}"
