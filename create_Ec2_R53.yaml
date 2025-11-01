@@ -27,12 +27,13 @@
      debug:
        var: ec2_output
 
-  #  - name: Create Route 53 Record
-  #    amazon.aws.route53_record:
-  #      zone_id: "{{ domain_name }}"
-  #      state: present
-  #      record: "{{ item.item }}.{{ domain_name }}"
-  #      type: A
-  #      ttl: 1
-  #      value: "{{ item.instances[0].private_ip_address }}"
-  #    loop: "{{ ec2_output.results }}"
+   - name: Create Route 53 Record
+     amazon.aws.route53_record:
+       zone_id: "{{ domain_name }}"
+       state: present
+       record: "{{ item.item }}.{{ domain_name }}"
+       type: A
+       ttl: 1
+       value: "{{ item.instances[0].private_ip_address }}"
+       overwrite: true
+     loop: "{{ ec2_output.results }}"
