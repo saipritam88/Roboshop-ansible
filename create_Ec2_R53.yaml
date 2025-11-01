@@ -1,5 +1,5 @@
 ---
-- name : Create EC2 Instance and Route 53 Record
+- name: Create EC2 Instance and Route 53 Record
   hosts: local
   connection: local
   vars:
@@ -10,7 +10,7 @@
     instances:
     - mongodb
     - redis
-- tasks:
+  tasks:
   - name: Launch EC2 Instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
