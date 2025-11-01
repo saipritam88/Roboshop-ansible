@@ -29,7 +29,7 @@
 
    - name: Create Route 53 Record
      amazon.aws.route53:
-       zone_id: "{{ domain_name }}"
+       zone: "{{ domain_name }}"
        state: present
        record: "{{ item.item }}.{{ domain_name }}" # e.g., mongodb.saikdevops.fun
        type: A
