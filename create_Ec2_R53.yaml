@@ -13,12 +13,12 @@
   tasks:
    - name: Launch EC2 Instances
      amazon.aws.ec2_instance:
-      name: "{{ item }}"
-      instance_type: "t2.micro"
-      image_id: "{{ image_id }}"
-      group_id: "{{ sg_id }}"
-      count: 1
-      instance_tags:
-        Name: "{{ item }}"
+       name: "{{ item }}"
+       instance_type: "t2.micro"
+       image_id: "{{ image_id }}"
+       group_id: "{{ sg_id }}"
+       count: 1
+       instance_tags:
+         Name: "{{ item }}"
      loop: "{{ instances }}"
      register: ec2_output
