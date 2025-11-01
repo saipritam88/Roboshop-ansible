@@ -9,7 +9,7 @@
     domain_name: "saikdevops.fun"
     instances:
     - mongodb
-    - redis
+    
   tasks:
   - name: Launch EC2 Instances
     amazon.aws.ec2_instance:
