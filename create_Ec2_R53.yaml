@@ -21,4 +21,4 @@
       instance_tags:
         Name: "{{ item }}"
     loop: "{{ instances }}"
-    register: ec2-output
+    register: ec2_output
