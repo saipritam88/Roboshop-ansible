@@ -16,9 +16,9 @@
        name: "{{ item }}"
        instance_type: "t2.micro"
        image_id: "{{ image_id }}"
-       group_id: "{{ sg_id }}"
+       security_group_ids: "{{ sg_id }}"
        count: 1
-       instance_tags:
+       tags:
          Name: "{{ item }}"
      loop: "{{ instances }}"
      register: ec2_output
