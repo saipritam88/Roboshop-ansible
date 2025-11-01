@@ -1,6 +1,6 @@
 ---
 - name : Create EC2 Instance with Route 53 Record
-  host: local
+  hosts: local
   connection: local
   vars:
     ami_id: "ami-09c813fb71547fc4f"
