@@ -1,0 +1,9 @@
+---
+
+- name: setup cart server
+  hosts: cart
+  become: yes
+
+  tasks:
+  - name: disable the nodejs default version
+    ansible.builtin.command: dnf module disable nodejs
