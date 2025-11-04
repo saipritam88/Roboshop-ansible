@@ -1,6 +1,6 @@
 ---
 - name: setup MySQL server
-  hosts: MySQL
+  hosts: mysql
   become: yes
 
   tasks:
