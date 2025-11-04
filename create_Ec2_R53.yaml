@@ -11,8 +11,8 @@
     - mongodb
     
   tasks:
-   - name: Launch EC2 Instances
-     amazon.aws.ec2_instance:
+  - name: Launch EC2 Instances
+    amazon.aws.ec2_instance:
        name: "{{ item }}"
        instance_type: "t2.micro"
        image_id: "{{ ami }}"
@@ -20,15 +20,15 @@
        count: 1
        tags:
          Name: "{{ item }}"
-     loop: "{{ instances }}"
-     register: ec2_output
+    loop: "{{ instances }}"
+    register: ec2_output
 
-   - name: Debug EC2 Output
-     debug:
-        var: ec2_output
+  - name: Debug EC2 Output
+    debug:
+      var: ec2_output
 
-   - name: Create Route 53 Record
-     amazon.aws.route53:
+  - name: Create Route 53 Record
+    amazon.aws.route53:
        zone: "{{ domain_name }}"
        state: present
        record: "{{ item.item }}.{{ domain_name }}" # e.g., mongodb.saikdevops.fun
@@ -36,4 +36,4 @@
        ttl: 1
        value: "{{ item.instances[0].private_ip_address }}"
        overwrite: true
-     loop: "{{ ec2_output.results }}"
+    loop: "{{ ec2_output.results }}"
