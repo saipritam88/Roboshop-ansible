@@ -18,6 +18,8 @@
       - shipping
       - payment
       - frontend
+      - dispatch
+
     
   tasks:
   - name: Launch EC2 Instances
@@ -37,8 +39,7 @@
   #      msg: "{{ ec2_output }}"
 
   - name: Create Route 53 Record
-    amazon.aws.route53:
-      name: "{{ item }}"
+    amazon.aws.route53.record:
       zone: "{{ domain_name }}"
       state: present
       record: "{{ item.item }}.{{ domain_name }}" # e.g., mongodb.saikdevops.fun
