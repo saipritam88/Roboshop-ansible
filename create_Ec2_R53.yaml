@@ -47,16 +47,16 @@
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
       overwrite: true
-  loop: "{{ ec2_output.results }}"
+    loop: "{{ ec2_output.results }}"
 
-  - name: Create Route 53 Record for frontend with Public IP
+  - name: create route53 record for frontend
     amazon.aws.route53:
-      zone: "{{ domain_name }}"
       state: present
-      record: "{{ domain_name }}"
+      zone: "{{ domain_name }}"
+      record: "{{ domain_name }}" # daws86s.fun
       type: A
       ttl: 1
-      value: "{{ ec2_output.results[-1].instances[0].public_ip_address }}"
-      when: item.item == "frontend"
+      value: "{{ item.instances[0].public_ip_address }}"
       overwrite: true
+    when: item.item == "frontend"
     loop: "{{ ec2_output.results }}"
