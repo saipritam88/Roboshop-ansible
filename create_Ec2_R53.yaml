@@ -53,8 +53,9 @@
     amazon.aws.route53:
       zone: "{{ domain_name }}"
       state: present
-      record: "frontend.{{ domain_name }}"
+      record: "{{ domain_name }}"
       type: A
       ttl: 1
       value: "{{ ec2_output.results[-1].instances[0].public_ip_address }}"
+      when: item.item == "frontend"
       overwrite: true
