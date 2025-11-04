@@ -8,7 +8,16 @@
     zone_id: "Z0948150OFPSYTNVYZOY"
     domain_name: "saikdevops.fun"
     instances:
-    - mongodb
+      - mongodb
+      - mysql
+      - rabbitmq
+      - redis
+      - catalog
+      - user
+      - cart
+      - shipping
+      - payment
+      - frontend
     
   tasks:
   - name: Launch EC2 Instances
