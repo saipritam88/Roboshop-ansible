@@ -67,10 +67,10 @@
   - name: import shipping data into mysql
     community.mysql.mysql_db: 
       state: import
-      name: all
+      name: shipping
       login_host: mysql.saikdevops.fun
       login_user: root
-      login_password: Roboshop@1
+      login_password: "Roboshop@1"
       target: "{{ item }}"
     loop:
     - /app/db/schema.sql
