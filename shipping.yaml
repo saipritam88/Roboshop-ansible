@@ -72,7 +72,7 @@
       - /app/db/app-user.sql
       - /app/db/master-data.sql
 
-- name: Copy systemd service file
+  - name: Copy systemd service file
   ansible.builtin.copy:
     src: shipping.service
     dest: /etc/systemd/system/shipping.service
