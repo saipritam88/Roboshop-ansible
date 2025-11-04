@@ -1,6 +1,6 @@
 ---
 - name: setup Redis server
-  hosts: Redis
+  hosts: redis
   become: yes
   tasks:
   - name: disable & enable redis version
