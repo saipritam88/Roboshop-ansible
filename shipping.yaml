@@ -69,8 +69,8 @@
       state: import
       name: all
       login_host: mysql.saikdevops.fun
-      login_user: roboshop
-      login_password: roboshop@1
+      login_user: root
+      login_password: Roboshop@1
       target: "{{ item }}"
     loop:
       - /app/db/schema.sql
