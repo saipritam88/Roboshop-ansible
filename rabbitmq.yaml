@@ -13,6 +13,7 @@
       ansible.builtin.package:
         name: rabbitmq-server
         state: present
+
     - name: start RabbitMQ service
       ansible.builtin.service:
         name: rabbitmq-server
@@ -22,7 +23,7 @@
     - name: setup user for RabbitMQ
       community.rabbitmq.rabbitmq_user:
       user: roboshop
-      password: roboshop123 
+      password: roboshop123
       permissions: 
       - vhost: /
         configure_priv: .*
