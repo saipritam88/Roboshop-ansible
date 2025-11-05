@@ -60,3 +60,4 @@
       overwrite: true
     when: item.item == "frontend"
     loop: "{{ ec2_output.results }}"
+    tags: frontend route53
