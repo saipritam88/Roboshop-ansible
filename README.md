@@ -60,3 +60,8 @@ The entire infra provisioning + configuration is automated end-to-end.
 <img width="1910" height="962" alt="image" src="https://github.com/user-attachments/assets/3a981aaa-9384-4673-85fe-004dcce25343" />
 
 <img width="1892" height="541" alt="image" src="https://github.com/user-attachments/assets/3d6de1e6-f193-4426-95da-979c32db6789" />
+
+
+## AWS Infrastructure Diagram
+
+![AWS Architecture](./aws_arch.png)
