@@ -58,7 +58,10 @@ The entire infra provisioning + configuration is automated end-to-end.
 
 ## Architecture Diagram
 
-![Roboshop Architecture](./roboshop_arch.png)
+## Architecture Diagram
+
+roboshop_arch.png
+
 
 
 
