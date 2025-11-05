@@ -70,7 +70,7 @@
       name: all
       login_host: mysql.saikdevops.fun
       login_user: root
-      login_password: "Roboshop@1"
+      login_password: "RoboShop@1"
       target: "{{ item }}"
     loop:
     - /app/db/schema.sql
