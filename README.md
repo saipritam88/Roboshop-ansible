@@ -55,17 +55,8 @@ The entire infra provisioning + configuration is automated end-to-end.
 | Package Managers | npm / pip / maven |
 
 ---
-
-## Architecture Diagram
-
-## Architecture Diagram
-
-roboshop_arch.png
-
-
-
-
-
 <img width="1909" height="688" alt="image" src="https://github.com/user-attachments/assets/a5383293-5018-43a6-bd62-e21342153440" />
 
 <img width="1910" height="962" alt="image" src="https://github.com/user-attachments/assets/3a981aaa-9384-4673-85fe-004dcce25343" />
+
+<img width="1892" height="541" alt="image" src="https://github.com/user-attachments/assets/3d6de1e6-f193-4426-95da-979c32db6789" />
