@@ -8,17 +8,17 @@
     zone_id: "Z0948150OFPSYTNVYZOY"
     domain_name: "saikdevops.fun"
     instances:
-      - mongodb
-      - mysql
-      - rabbitmq
-      - redis
-      - catalogue
-      - user
-      - cart
-      - shipping
-      - payment
-      - frontend
-      - dispatch
+      # - mongodb
+      # - mysql
+      # - rabbitmq
+      # - redis
+      # - catalogue
+      # - user
+      # - cart
+      # - shipping
+      # - payment
+      # - frontend
+      # - dispatch
 
     
   tasks:
