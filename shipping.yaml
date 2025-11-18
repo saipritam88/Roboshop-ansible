@@ -62,7 +62,7 @@
   - name: Copy systemd service file
     ansible.builtin.copy:
       src: shipping.service
-      dest: /etc/systemd/system/shipping.service  
+      dest: /etc/systemd/system/shipping.service
 
   - name: import shipping data into mysql
     community.mysql.mysql_db: 
@@ -79,9 +79,4 @@
 
   
 
-  - name: daemon reload and start shipping service
-    ansible.builtin.systemd:
-      name: shipping
-      daemon_reload: yes
-      state: started
-      enabled: yes
+  
